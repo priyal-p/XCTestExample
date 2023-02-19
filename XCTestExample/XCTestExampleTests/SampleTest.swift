@@ -8,18 +8,18 @@
 import XCTest
 
 final class SampleTest: XCTestCase {
-
-    var sample: Sample!
-
+    let sample = Sample()
+//    var sample: Sample!
+//
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        sample = Sample()
+        print("setup - SampleTest identifier \(ObjectIdentifier(self))")
+//        sample = Sample()
     }
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        print("setup - SampleTest identifier \(ObjectIdentifier(self))")
-        sample = nil
+//        sample = nil
     }
 
     func testExample() {
