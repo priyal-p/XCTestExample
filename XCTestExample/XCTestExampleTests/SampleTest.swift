@@ -8,7 +8,7 @@
 import XCTest
 
 final class SampleTest: XCTestCase {
-    let sample = Sample()
+    var sample: Sample! = Sample()
 //    var sample: Sample!
 //
     override func setUpWithError() throws {
@@ -19,7 +19,7 @@ final class SampleTest: XCTestCase {
 
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-//        sample = nil
+        sample = nil
     }
 
     func testExample() {
@@ -36,6 +36,11 @@ final class SampleTest: XCTestCase {
 
     class Sample {
         var state = 0
+
+//        deinit {
+//            // Simulate crash on deinitialisation
+//            fatalError()
+//        }
 
         func changeState() {
             state += 1
